@@ -267,8 +267,8 @@ public class JeevesEngine {
     private void loadConfigFile(ServletContext servletContext, String path, String file, ServiceManager serviceMan) throws Exception
 	{
 		file = path + file;
-
-		info("Loading : " + file);
+                info("!!!!!!");
+		info("Loading : " + path + file);
 
 		Element configRoot = Xml.loadFile(file);
 
@@ -507,7 +507,7 @@ public class JeevesEngine {
 	/** Setup services found in the services tag (config.xml)
 	  */
 
-	@SuppressWarnings("unchecked")
+	//@SuppressWarnings("unchecked")
 	public void initServices(Element services) throws Exception
 	{
 		info("Initializing services...");

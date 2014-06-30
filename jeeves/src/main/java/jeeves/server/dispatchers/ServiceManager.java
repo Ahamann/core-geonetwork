@@ -160,6 +160,8 @@ public class ServiceManager {
 
     @SuppressWarnings("unchecked")
     public ServiceInfo addService(String pack, Element srv) throws Exception {
+        System.out.println("add service");
+        info("ADD");
         String name = srv.getAttributeValue(ConfigFile.Service.Attr.NAME);
         String match = srv.getAttributeValue(ConfigFile.Service.Attr.MATCH);
         String sheet = srv.getAttributeValue(ConfigFile.Service.Attr.SHEET);
@@ -386,7 +388,7 @@ public class ServiceManager {
 			while (true) {
 				String srvName = req.getService();
 
-				info("Dispatching : " + srvName);
+				info("hkjdshfljhsdfhljshdlfjhlksdjf : " + srvName);
 				logParameters(req.getParams());
 
 				ArrayList<ServiceInfo> al = htServices.get(srvName);
@@ -550,7 +552,8 @@ public class ServiceManager {
 	private String dispatchOutput(ServiceRequest req, ServiceContext context,
                                   Element response, OutputPage outPage, boolean cache) throws Exception {
         info("   -> dispatching to output for : " + req.getService());
-
+info("------> BIMMMMM");
+        info(Xml.getJSON(response));
 		//------------------------------------------------------------------------
 		//--- check if the output page is a foward
 
@@ -571,6 +574,8 @@ public class ServiceManager {
                 warning("Response is null and there is no output page for : " + req.getService());
             else {
                 info("     -> writing xml for : " + req.getService());
+                
+                info("     ----------------------------------------------> sup?");
 
 				//--- this logging is usefull for xml services that are called by javascript code
                 if (isDebug()) debug("Service xml is :\n" + Xml.getString(response));

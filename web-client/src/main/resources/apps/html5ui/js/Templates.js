@@ -197,8 +197,12 @@ GeoNetwork.HTML5UI.Templates.LINKCONTAINER =
  * Button to download metadata
  */
 GeoNetwork.HTML5UI.Templates.DOWNLOAD =
-    '<div>\
+    '<div>lala\
   <button class="bookmark-icon" title="{[OpenLayers.i18n("saveXml") ]}"\
+   onclick="catalogue.metadataXMLShow(\'{uuid}\', \'{schema}\');">\
+          <img src="{[catalogue.URL]}/apps/html5ui/images/default/page_code.png"/>\
+      </button>\
+       <button class="bookmark-icon" title="123"\
    onclick="catalogue.metadataXMLShow(\'{uuid}\', \'{schema}\');">\
           <img src="{[catalogue.URL]}/apps/html5ui/images/default/page_code.png"/>\
       </button>\

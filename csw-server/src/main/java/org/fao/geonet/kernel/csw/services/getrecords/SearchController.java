@@ -213,7 +213,7 @@ public class SearchController {
      */
   public static Element retrieveMetadata(ServiceContext context, String id, ElementSetName setName, OutputSchema
           outSchema, Set<String> elemNames, String typeName, ResultType resultType, String strategy, String displayLanguage) throws CatalogException {
-
+      
 	try	{
 		//--- get metadata from DB
 		GeonetContext gc = (GeonetContext) context.getHandlerContext(Geonet.CONTEXT_NAME);

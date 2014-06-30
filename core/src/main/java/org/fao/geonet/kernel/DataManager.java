@@ -1598,6 +1598,8 @@ public class DataManager {
      * @throws Exception
      */
     public Element getMetadata(ServiceContext srvContext, String id, boolean forEditing, boolean withEditorValidationErrors, boolean keepXlinkAttributes) throws Exception {
+        System.out.println("BUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU");
+         Log.info(Log.SERVICE, "BABABABABABABABBABABABABABAB"); 
         boolean doXLinks = xmlSerializer.resolveXLinks();
         Element metadataXml = xmlSerializer.selectNoXLinkResolver(id, false);
         if (metadataXml == null) return null;

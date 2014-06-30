@@ -300,7 +300,8 @@ GeoNetwork.app = function() {
     }
 
     function show(uuid, record, url, maximized, width, height, clean) {
-
+//alert('apps.js/html5ui');
+//alert(Ext.encode());
         Ext.get("metadata-info").update("");
 
         var button_width = 101;
@@ -335,6 +336,8 @@ GeoNetwork.app = function() {
         // });
 
         showMetadata();
+        
+        
         app.breadcrumb.setDefaultPrevious(2);
         app.breadcrumb.setCurrent({
             text : record.get('title'),
@@ -406,6 +409,8 @@ GeoNetwork.app = function() {
         GeoNetwork.Util.addMetaTag("og:url", Ext.state.Manager.getProvider()
                 .getPrettyLink());
 
+
+
         // Updating social
         Ext.get("custom-tweet-button").dom.href = "https://twitter.com/share?text="
                 + record.get('title')
@@ -461,7 +466,7 @@ GeoNetwork.app = function() {
         Ext.getCmp("metadata-panel").doLayout();
         // Add to recent viewed
         addToRecentViewed(record);
-
+        
     }
 
     function addToRecentViewed(record) {

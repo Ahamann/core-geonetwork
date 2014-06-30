@@ -101,6 +101,7 @@ GeoNetwork.view.ViewWindow = Ext.extend(Ext.Window, {
         return this.panel;
     },
     initComponent: function(){
+        alert('window');
         Ext.applyIf(this, this.defaultConfig);
         
         this.tools = [{

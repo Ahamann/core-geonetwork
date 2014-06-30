@@ -568,6 +568,7 @@ GeoNetwork.app = function () {
      * @return
      */
     function createResultsPanel(permalinkProvider) {
+        alert('brumm');
         metadataResultsView = new GeoNetwork.MetadataResultsView({
             catalogue : catalogue,
             displaySerieMembers : true,
